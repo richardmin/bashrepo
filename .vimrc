@@ -67,12 +67,12 @@ endif
 set hlsearch
 set incsearch
 
-'' matching braces
+
 set showmatch 
 set mat=2
 
 
-'' no noises thanks.
+
 set noerrorbells
 set novisualbell
 set t_vb=
