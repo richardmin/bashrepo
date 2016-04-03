@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/ubuntu/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -106,7 +106,7 @@ setopt automenu
 autoload -Uz compinit
 compinit
 
-zstyle :compinstall filename '/home/ubuntu/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 # Fix Locale
 export LC_ALL=en_US.UTF-8
@@ -115,16 +115,12 @@ export LANG=en_US.UTF-8
 
 #FUNCTION ALIASES
 
-function lscolours() {
-	ls "$@" --color
-}
 
 function cdAndLS() {
-	cd "$@" && lscolours
+	cd "$@" && ls
 }
 
-alias ls='lscolours'
-alias cd='cd'
+alias cd='cdAndLS'
 
 
 mongod=/usr/local/mongodb/bin/mongod
