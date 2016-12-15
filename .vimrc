@@ -1,3 +1,9 @@
+call plug#begin('~/.vim/plugged')
+
+" Plugins go here
+
+call plug#end()
+
 
 set expandtab
 set shiftwidth=4
@@ -117,4 +123,4 @@ map <leader>ba :bufdo bd<cr>
 
 set number
 set relativenumber
-
+cnoremap mk. !mkdir -p <c-r>=expand("%:h")<cr>/
