@@ -268,5 +268,3 @@ zstyle ':completion:*' group-name ''
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:`yarn global bin`"
 export PATH=$PATH:/usr/local/go/bin
-
-echo eval "$(direnv hook bash)"
