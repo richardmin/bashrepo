@@ -265,6 +265,9 @@ zstyle ':completion:*' group-name ''
 
 . ~/.aliases
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.node/bin:$PATH"
 export PATH="$PATH:`yarn global bin`"
 export PATH=$PATH:/usr/local/go/bin
+export NODE_ENV=development
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
