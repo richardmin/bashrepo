@@ -1,7 +1,5 @@
 call plug#begin('~/.vim/plugged')
-
 " Plugins go here
-
 call plug#end()
 
 

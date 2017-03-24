@@ -1,0 +1,5 @@
+export PATH="$HOME/.node/bin:$PATH"
+export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:/usr/local/go/bin"
+
+export NODE_ENV = development

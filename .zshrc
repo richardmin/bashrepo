@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=~/.oh-my-zsh
-  export EDITOR=vim
+export ZSH=~/.oh-my-zsh
+export EDITOR=vim
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -49,12 +49,11 @@ ZSH_THEME="mh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
+plugins=(git docker)
 # User configuration
 
-  #export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-  #export
+#export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+#export
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -118,7 +117,7 @@ export LANG=en_US.UTF-8
 
 
 function cdAndLS() {
-	cd "$@" && ls
+cd "$@" && ls
 }
 
 alias cd='cdAndLS'
@@ -134,23 +133,23 @@ stop() {
     grep_mongo=`ps aux | grep -v grep | grep "${mongod}"`
     if [ ${#grep_mongo} -gt 0 ]
     then
-  echo "Stop MongoDB."
-  PID=`ps x | grep -v grep | grep "${mongod}" | awk '{ print $1 }'`
-  `kill -2 ${PID}`
-  RETVAL=$?
+        echo "Stop MongoDB."
+        PID=`ps x | grep -v grep | grep "${mongod}" | awk '{ print $1 }'`
+        `kill -2 ${PID}`
+        RETVAL=$?
     else
-  echo "MongoDB is not running."
+        echo "MongoDB is not running."
     fi
 }
 start() {
     grep_mongo=`ps aux | grep -v grep | grep "${mongod}"`
     if [ -n "${grep_mongo}" ]
     then
-  echo "MongoDB is already running."
+        echo "MongoDB is already running."
     else
-  echo "Start MongoDB."
-  `${mongod} --dbpath ${mongod_data} --logpath ${mongod_log} --fork --logappend`
-  RETVAL=$?
+        echo "Start MongoDB."
+        `${mongod} --dbpath ${mongod_data} --logpath ${mongod_log} --fork --logappend`
+        RETVAL=$?
     fi
 }
 
@@ -206,32 +205,32 @@ alias whereami=display_info
 alias cp='cp -i'
 alias mv='mv -i'
 
-  # open browser on urls
-  _browser_fts=(htm html de org net com at cx nl se dk dk php)
-  for ft in $_browser_fts ; do alias -s $ft=$BROWSER ; done
+# open browser on urls
+_browser_fts=(htm html de org net com at cx nl se dk dk php)
+for ft in $_browser_fts ; do alias -s $ft=$BROWSER ; done
 
-  _editor_fts=(cpp cxx cc c hh h inl asc txt TXT tex)
-  for ft in $_editor_fts ; do alias -s $ft=$EDITOR ; done
+_editor_fts=(cpp cxx cc c hh h inl asc txt TXT tex)
+for ft in $_editor_fts ; do alias -s $ft=$EDITOR ; done
 
-  _image_fts=(jpg jpeg png gif mng tiff tif xpm)
-  for ft in $_image_fts ; do alias -s $ft=$XIVIEWER; done
+_image_fts=(jpg jpeg png gif mng tiff tif xpm)
+for ft in $_image_fts ; do alias -s $ft=$XIVIEWER; done
 
-  _media_fts=(ape avi flv mkv mov mp3 mpeg mpg ogg ogm rm wav webm)
-  for ft in $_media_fts ; do alias -s $ft=mplayer ; done
+_media_fts=(ape avi flv mkv mov mp3 mpeg mpg ogg ogm rm wav webm)
+for ft in $_media_fts ; do alias -s $ft=mplayer ; done
 
-  #read documents
-  alias -s pdf=acroread
-  alias -s ps=gv
-  alias -s dvi=xdvi
-  alias -s chm=xchm
-  alias -s djvu=djview
+#read documents
+alias -s pdf=acroread
+alias -s ps=gv
+alias -s dvi=xdvi
+alias -s chm=xchm
+alias -s djvu=djview
 
-  #list whats inside packed file
-  alias -s zip="unzip -l"
-  alias -s rar="unrar l"
-  alias -s tar="tar tf"
-  alias -s tar.gz="echo "
-  alias -s ace="unace l"
+#list whats inside packed file
+alias -s zip="unzip -l"
+alias -s rar="unrar l"
+alias -s tar="tar tf"
+alias -s tar.gz="echo "
+alias -s ace="unace l"
 
 
 # Make zsh know about hosts already accessed by SSH
@@ -262,12 +261,10 @@ zstyle ':completion:*:warnings' format 'No matches for: %d'
 zstyle ':completion:*:corrections' format '%B%d (errors: %e)%b'
 zstyle ':completion:*' group-name ''
 
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
 
-. ~/.aliases
-
-export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/.node/bin:$PATH"
-export PATH="$PATH:`yarn global bin`"
-export PATH=$PATH:/usr/local/go/bin
-export NODE_ENV=development
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if [ -f ~/.path ]; then
+    source ~/.path
+fi
