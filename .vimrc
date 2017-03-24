@@ -1,5 +1,10 @@
 call plug#begin('~/.vim/plugged')
 " Plugins go here
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-surround'
+Plug 'valloric/youcompleteme'
+Plug 'pangloss/vim-javascript'
+Plug 'fatih/vim-go'
 call plug#end()
 
 
