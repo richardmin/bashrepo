@@ -115,6 +115,7 @@ cd "$@" && ls
 
 alias cd='cdAndLS'
 
+alias touch='nocorrect touch'
 
 mongod=/usr/local/mongodb/bin/mongod
 mongod_data=/Users/michito/work/mongodb_data
