@@ -140,3 +140,8 @@ fi
 if [ -f ~/.path ]; then
     source ~/.path
 fi
+
+# System specific Commands
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias bat="pmset -g batt"
+fi
