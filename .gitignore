@@ -1,6 +1,6 @@
 *
-!.README.md
+!.zsh/
+!.zsh/*
 !.zshrc
 !.gitignore
 !.vimrc
-!.path

@@ -138,3 +138,4 @@ function! XTermPasteBegin()
     set paste
       return ""
 endfunction
+
