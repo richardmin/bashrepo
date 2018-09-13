@@ -21,4 +21,3 @@ zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 
 zstyle ':completion:*' menu select=2 _expand _complete _correct _approximate
-zstyle ':completion:*' menu select=long
