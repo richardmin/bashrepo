@@ -4,3 +4,5 @@
 !.zshrc
 !.gitignore
 !.vimrc
+!.vim/
+!.vim/*
