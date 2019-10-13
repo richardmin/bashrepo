@@ -29,5 +29,9 @@ function git_root() {
   fi
 }
 
+export DEFAULT_USER=`whoami`
 
-source ~/.zsh/powerlevel9k/powerlevel9k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.zsh/p10k.zsh ]] && source ~/.zsh/p10k.zsh
+
+source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme

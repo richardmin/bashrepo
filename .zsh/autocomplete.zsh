@@ -17,7 +17,6 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
 
-
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 
 zstyle ':completion:*' menu select=2 _expand _complete _correct _approximate

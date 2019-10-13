@@ -1,11 +1,10 @@
-export PATH="$HOME/.node/bin:$PATH"
-export PATH="$PATH:`yarn global bin`"
-export PATH="$PATH:/usr/local/go/bin"
-
+# Javascript Path
+[ -d "$HOME/.node/bin" ] && export PATH="$PATH:$HOME/.node/bin"
+[ -x "$(command -v yarn)" ] && export PATH="$PATH:`yarn global bin`"
 export NODE_ENV=development
-export DEFAULT_USER=`whoami`
 
-export TERM=xterm-256color
+# Go Path
+[ -d "/usr/local/go/bin$" ] && export PATH="$PATH:/usr/local/go/bin"
 
 if [ -f ~/.local_path ]; then
     . ~/.local_path
