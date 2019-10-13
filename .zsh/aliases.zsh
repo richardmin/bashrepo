@@ -13,6 +13,7 @@ alias ldot='ls -ld .*' # only hidden items
 alias lS='ls -1FSsh' # show items with biggest first.
 alias lart='ls -1Fcart' # show oldest items first, including hidden items
 alias lrt='ls -1Fcrt' # show oldest items first, no hidden items
+alias la='ls -al'
 
 alias t='tail -f'
 

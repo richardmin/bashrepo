@@ -1,5 +1,3 @@
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 autoload -Uz compinit
 compinit -d "$ZSH_CACHE/zcompdump"
 zstyle ':completion::complete:*' use-cache 1
