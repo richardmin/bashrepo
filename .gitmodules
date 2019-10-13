@@ -4,3 +4,6 @@
 [submodule "/Users/richardmin/.zsh/powerlevel10k"]
 	path = /Users/richardmin/.zsh/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "/Users/richardmin/.zsh/zsh-autosuggestions"]
+	path = /Users/richardmin/.zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
