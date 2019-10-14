@@ -23,6 +23,7 @@ alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 alias help='man'
 alias h='history'
 
+alias move="mv"
 
 alias -g H='| head'
 alias -g T='| tail'
